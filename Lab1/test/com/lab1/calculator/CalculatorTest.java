@@ -5,12 +5,11 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-
 public class CalculatorTest {
 	
 	private Calculator calculator;
 	
-	@Before
+	@Before 
 	public void setUp() {
 		calculator = new Calculator();
 	}
@@ -22,12 +21,12 @@ public class CalculatorTest {
 	
 	@Test
 	public void subtractTest() {
-		assertEquals(4, calculator.subtract(5, 2));
+		assertEquals(3, calculator.subtract(5, 2));
 	}
 	
 	@Test
 	public void multiplyTest() {
-		assertEquals(4, calculator.multiply(3, 2));
+		assertEquals(6, calculator.multiply(3, 2));
 	}
 	
 	@Test
@@ -37,14 +36,14 @@ public class CalculatorTest {
 	
 	@Test
 	public void isEqualPositiveTest() {
-		assertTrue(calculator.isEqual(2, 3));
+		assertTrue(calculator.isEqual(3, 3));
 	}
 	
 	@Test
 	public void isEqualNegativeTest() {
 		assertFalse(calculator.isEqual(3, 1));
 	}
-#Limitations on basic unit testing could occur because we are not fully testing 
-#the entire program so we may not know if the code is shippable or not. 
+//Limitations on basic unit testing could occur because we are not fully testing 
+//the entire program so we may not know if the code is shippable or not. 
 
 }
